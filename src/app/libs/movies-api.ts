@@ -1,0 +1,1 @@
+//Para funções helper utilizadas pelo api/movies/search
