@@ -56,7 +56,9 @@ export default function LoginPage(){
     }
 
 
-    return (
+    return ( 
+        //chutar o footer
+        <div style={{minHeight: "80vh"}}>
         <form className='login-form' action={loginAction}>
 
             {/* <div>
@@ -86,6 +88,7 @@ export default function LoginPage(){
             <div className='link-cadastrar'>
                 Não tem conta? Clique <Link className='btn-criar-conta' href="/create">aqui</Link>
             </div>
-        </form>
+            </form>
+            </div>
     )
 }

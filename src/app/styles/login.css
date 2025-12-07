@@ -1,33 +1,40 @@
 .login-form{
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
-    border-radius: 2rem;
-    width: 60%;
-    margin: 2% auto;
+    /* border: 1px solid black; */
+    background-color: rgb(240, 240, 240);
+    border-radius: 1.5rem;
+    width: 80%;
+    margin: 6% auto;
     align-items: center;
     justify-content: space-between;
+    box-shadow: black;
     gap: 4%;
     padding-top: 1%;
     padding-bottom: 0.5%;
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.1);
+
     div{
         text-align: center;
     }
 
     button{
-        width: 40%;
-        /* border-radius: 1rem; */
-        /* background-color: rgb(138, 138, 249); */
-        /* color: black; */
+        width: 30%;
+        border-radius: 1rem;
+        background-color: black;
+        color: white;
         height: 2.5vh;
-        margin-top: 7%;
-        font-size: 1rem;
+        margin-top: 2%;
+        font-size: 0.9rem;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
     }
 }
 
 .user-input{
     display: flex;
-    border-bottom: 1px solid gray;
+    border-radius: 1rem;
+    border-bottom: 1px solid rgb(255, 255, 255);
     padding-bottom: 1%;
     width: 90%;
     gap: 1%;
@@ -37,6 +44,7 @@
         border: none;
         width: 80%;
         padding-left: 1rem;
+        background-color: white;
     }
 
     input:focus{
@@ -50,22 +58,21 @@
 
 }
 
-.user-input:focus-within{
-    border-bottom: 2px solid rgb(0, 0, 0);
-}
 
 .form-image{
-    width: 35%;
+    width: 30%;
     height: auto;
 }
 
 .link-cadastrar{
     color: black;
     margin-top: 5%;
+    margin-bottom: 5%;
 }
 
 .btn-criar-conta{
     text-decoration: underline black 1.2px;
+    margin-top: 5%;
     /* color: darkslateblue; */
     font-weight: bold;
 }
