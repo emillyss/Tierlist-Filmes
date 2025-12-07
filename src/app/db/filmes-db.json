@@ -117,5 +117,22 @@
     "imdbRating": "8.7",
     "category": "B",
     "createdAt": "2025-12-07T22:51:50.395Z"
+  },
+  {
+    "id": "tt1843961",
+    "title": "Lady Gaga Presents: The Monster Ball Tour at Madison Square Garden",
+    "year": "2011",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZGFmYmRiM2UtOTI2Ni00ZjJmLTgyZjktYmFkZDQxYWVkZjNkXkEyXkFqcGc@._V1_SX300.jpg",
+    "runtime": "117 min",
+    "genre": "Documentary, Music",
+    "plot": "A live concert performance of Grammy-winning pop sensation Lady Gaga at Madison Square Garden in New York City.",
+    "director": "Laurieann Gibson",
+    "writer": "N/A",
+    "actors": "Lady Gaga, Allison Hagendorf, Lady Starlight",
+    "country": "United States",
+    "awards": "Won 1 Primetime Emmy. 3 wins & 10 nominations total",
+    "imdbRating": "8.4",
+    "category": "S",
+    "createdAt": "2025-12-07T22:58:24.056Z"
   }
 ]
