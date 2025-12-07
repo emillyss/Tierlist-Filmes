@@ -10,7 +10,7 @@ async function openSessionToken(token: string){
     //Por exemplo pode usar o próprio node para isso diretamente no terminal. require('crypto').randomBytes(64).toString('hex').
     //Para acessar o terminal "node", digite "node".
     //Para retornar ao terminal bash, digite ".exit"
-    const encodedKey = new TextEncoder().encode(process.env.TOKEN);
+    const encodedKey = new TextEncoder().encode(process.env.TOKEN_SECRET);
     //Aqui a lib "jose" irá verificar se há um token válido e extrair o payload (carga útil)
     try{
         const {payload} = await jwtVerify(token, encodedKey, {
@@ -26,8 +26,8 @@ async function openSessionToken(token: string){
 //id e email vem do html
 //chama quando vai criar o token
 export async function createSessionToken(userId: string, userEmail: string){
-    const encodedKey = new TextEncoder().encode(process.env.TOKEN); 
-    const expiresAt = Date.now() + 3600;
+    const encodedKey = new TextEncoder().encode(process.env.TOKEN_SECRET); // trocando o token secret para nao variar por navegador
+    const expiresAt = Date.now() + 3600 * 1000;
 
 
     //Cria  session. É feita uma "assinatura" do payload
@@ -45,7 +45,7 @@ export async function createSessionToken(userId: string, userEmail: string){
     //cookie é um mapa de chave e valor(nesse caso a chave é session e valor é o token)
     //Através da cookieStore conseguimos buscar (get) e salvar (set) cookies no navegador.
     cookieStore.set('session', session, {
-        expires: expiresAt * 1000,
+        expires: new Date(expiresAt),
         path: '/',
         httpOnly: true //para não abrirem o valor de cookie maliciosamente
     });

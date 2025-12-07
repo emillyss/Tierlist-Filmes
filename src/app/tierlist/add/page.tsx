@@ -15,13 +15,32 @@ export default function AddMoviePage() {
   const [query, setQuery] = useState('');
   const [title, setTitle] = useState('');
   const [category, setCategory] = useState<'S'|'A'|'B'|'C'|'D'>('C');
+  const [poster, setPoster] = useState('');
+  const [releaseDate, setReleaseDate] = useState('');
+  const [movieData, setMovieData] = useState<any>(null);
 
-  // pesquisa simples: aqui apenas copia o texto para o título (sem API)
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    setTitle(query.trim());
+const handleSearch = async (e: React.FormEvent) => {
+  e.preventDefault();
+  if (!query.trim()) return alert("Digite algo para pesquisar");
+
+  try {
+    const res = await fetch(`/api/movies/search?title=${encodeURIComponent(query)}`);
+    const json = await res.json();
+
+    if (!res.ok) {
+      alert(json.error || "Erro ao buscar o filme");
+      return;
+    }
+      setTitle(json.title);
+      setPoster(json.poster || '');
+      setReleaseDate(json.release_date || json.released || '');
+      setMovieData(json);
+
+  } catch (err) {
+    console.error("Erro na busca:", err);
+    alert("Erro ao buscar filme");
   }
-
+};
   // envia para /api/movies/save
   const handleSave = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -31,7 +50,10 @@ export default function AddMoviePage() {
       const res = await fetch('/api/movies/save', {
         method: 'POST',
         headers: { 'content-type': 'application/json' },
-        body: JSON.stringify({ title, category })
+        body: JSON.stringify({
+          ...movieData, // vinii: alterei para ele enviar não só os dados da API e mas sim API+Cat.
+          category
+        })
       });
 
       const json = await res.json();
@@ -88,4 +110,3 @@ export default function AddMoviePage() {
     </div>
   );
 }
-

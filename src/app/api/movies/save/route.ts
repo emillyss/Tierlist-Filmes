@@ -17,18 +17,17 @@ export async function POST(req: Request) {
 
     if (!title) {
       return NextResponse.json({ error: 'Título obrigatório' }, { status: 400 });
-    }
+    } // valida de nobo
 
     const filmes = await ConexaoBD.retornaBD(arquivo);
 
     const novo = {
-      id: crypto.randomUUID(),
+      ...body,
+      id: body.id || crypto.randomUUID(),
       title,
-      posterPath: body.posterPath || null,
-      release_date: body.release_date || null,
       category: ['S','A','B','C','D'].includes(category) ? category : 'C',
       createdAt: new Date().toISOString()
-    };
+    }; // deixa default
 
     filmes.push(novo);
     await ConexaoBD.armazenaBD(arquivo, filmes);

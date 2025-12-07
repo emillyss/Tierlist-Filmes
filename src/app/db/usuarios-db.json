@@ -3,5 +3,10 @@
     "id": "284a82c1-a95c-4f05-a6e1-389dadb1c28f",
     "email": "emilly@gmail.com",
     "password": "$2b$10$AKAskEGXn2qko6eUBMMWM.ko6lnDrV290VN.ObKvZKRIKONg6k5d6"
+  },
+  {
+    "id": "c68aff04-4209-4be2-aa94-0cd36aea5459",
+    "email": "vinicius@vini.com",
+    "password": "$2b$10$0lljtJxm0KvwLHYf0IP5/uUrYo0tDWS.sa0Jqi5OpYPRJa3GJgV4S"
   }
 ]
