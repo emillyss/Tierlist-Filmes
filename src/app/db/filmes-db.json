@@ -13,7 +13,7 @@
     "country": "United States, United Kingdom",
     "awards": "Won 2 Oscars. 163 wins & 165 nominations total",
     "imdbRating": "9.1",
-    "category": "A",
+    "category": "B",
     "createdAt": "2025-12-07T19:09:36.215Z"
   },
   {
@@ -30,7 +30,7 @@
     "country": "United States, United Kingdom, Canada",
     "awards": "Won 1 Oscar. 45 wins & 148 nominations total",
     "imdbRating": "8.7",
-    "category": "B",
+    "category": "A",
     "createdAt": "2025-12-07T19:09:59.580Z"
   },
   {
@@ -102,20 +102,20 @@
     "createdAt": "2025-12-07T19:10:54.582Z"
   },
   {
-    "id": "tt0799922",
-    "title": "Wizards of Waverly Place",
-    "year": "2007–2012",
-    "poster": "https://m.media-amazon.com/images/M/MV5BMjhlMTJiNjctZTY2MC00YTU0LWEzODUtZGM2NDA3N2ZhYWQ2XkEyXkFqcGc@._V1_SX300.jpg",
-    "runtime": "22 min",
-    "genre": "Adventure, Comedy, Drama",
-    "plot": "The Russo family may be an ordinary family with an average restaurant, but behind closed doors, all three children must compete to be the next family wizard.",
-    "director": "N/A",
-    "writer": "Todd J. Greenwald",
-    "actors": "Selena Gomez, David Henrie, Jake T. Austin",
+    "id": "tt0327597",
+    "title": "Coraline",
+    "year": "2009",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMzQxNjM5NzkxNV5BMl5BanBnXkFtZTcwMzg5NDMwMg@@._V1_SX300.jpg",
+    "runtime": "100 min",
+    "genre": "Animation, Drama, Family",
+    "plot": "Wandering her rambling old house in her boring new town, a young girl discovers a hidden door to a strangely idealized version of her life that seems too good to be true.",
+    "director": "Henry Selick",
+    "writer": "Henry Selick, Neil Gaiman",
+    "actors": "Dakota Fanning, Teri Hatcher, John Hodgman",
     "country": "United States",
-    "awards": "Won 2 Primetime Emmys. 49 wins & 68 nominations total",
-    "imdbRating": "6.9",
-    "category": "S",
-    "createdAt": "2025-12-07T19:36:06.913Z"
+    "awards": "Nominated for 1 Oscar. 8 wins & 46 nominations total",
+    "imdbRating": "7.8",
+    "category": "C",
+    "createdAt": "2025-12-07T21:19:22.707Z"
   }
 ]

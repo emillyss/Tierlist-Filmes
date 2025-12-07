@@ -6,28 +6,29 @@ header{
     background: rgba(0, 0, 0, 0.781);
 }
 
-#tiermovie{
+#IMGfita{
     height: 100px;
     width: auto;
 }
 
-#claquete{
+#IMGlogo{
     height: 124px;
     width: auto;
     margin-left: 12px;
 }
 
-#kkk{
+#parteEsquerda{
     display: flex;
     align-items: center;
 }
 
-#tier{
+#p-tiermovie{
     margin-left: 100px;
+    color: white;
+    font-size: 40px;
+    font-weight: 600;
 }
 
 #logout{
-    align-items: flex-end;
-    
-    
+    align-items: flex-end;  
 }

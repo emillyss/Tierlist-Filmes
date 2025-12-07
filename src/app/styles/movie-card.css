@@ -28,7 +28,7 @@ article{
     justify-content: space-between;
 }
 
-#central{
+#centro{
     display: flex;   
     justify-content: center;
 }
@@ -84,6 +84,7 @@ article{
     border-radius: 6px;
     color: rgba(0, 0, 0, 0.927);
     margin-left: 8px;
+    cursor: pointer;
 }
 
 #nota{
