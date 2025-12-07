@@ -3,6 +3,7 @@
 //Faz chamadas à API OMDb via /api/movies/search
 //Contém um botão de salvar que usa /api/movies/save
 //Redireciona para tierlist/page.tsx
+// Removi o CSS dessa pagina em específico, o global se aplica muito bem nela
 
 'use client'
 
@@ -71,15 +72,15 @@ const handleSearch = async (e: React.FormEvent) => {
 
   return (
     <div style={{ maxWidth: 900, margin: '32px auto', padding: 16 }}>
-      <header style={{ marginBottom: 18 }}>
-        <h2 style={{ margin: 0 }}>Adicionar Filme</h2>
+      <header style={{ marginBottom: 18 , alignItems: 'center'}}>
+              <h2 style={{ margin: 0, color: '#FFFFFF'}}>Adicionar Filme</h2>
       </header>
 
       <form onSubmit={handleSearch} style={{ display: 'flex', gap: 8, marginBottom: 16 }}>
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="Pesquisar nome do filme (simulado)"
+          placeholder="Pesquisar nome do filme"
           style={{ flex: 1, padding: 8 }}
         />
         <button type="submit" style={{ padding: '8px 12px' }}>Pesquisar</button>

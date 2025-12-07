@@ -8,5 +8,10 @@
     "id": "c68aff04-4209-4be2-aa94-0cd36aea5459",
     "email": "vinicius@vini.com",
     "password": "$2b$10$0lljtJxm0KvwLHYf0IP5/uUrYo0tDWS.sa0Jqi5OpYPRJa3GJgV4S"
+  },
+  {
+    "id": "4fb9ab0e-fa38-43b0-8235-b8577436668c",
+    "email": "abelhudo@bee.com",
+    "password": "$2b$10$Qojr/2GEB.YnCfO/bvYFae5OV6TkDoLz2EwygVzmBJCKytU9xXqHW"
   }
 ]

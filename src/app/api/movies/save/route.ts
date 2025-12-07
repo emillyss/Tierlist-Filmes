@@ -13,11 +13,11 @@ export async function POST(req: Request) {
   try {
     const body = await req.json();
     const title = String(body.title || '').trim();
-    const category = String(body.category || 'C').toUpperCase();
+    const category = String(body.category || 'C').toUpperCase(); // C default
 
     if (!title) {
       return NextResponse.json({ error: 'Título obrigatório' }, { status: 400 });
-    } // valida de nobo
+    } // valida de novo
 
     const filmes = await ConexaoBD.retornaBD(arquivo);
 
@@ -27,7 +27,7 @@ export async function POST(req: Request) {
       title,
       category: ['S','A','B','C','D'].includes(category) ? category : 'C',
       createdAt: new Date().toISOString()
-    }; // deixa default
+    }; // C default
 
     filmes.push(novo);
     await ConexaoBD.armazenaBD(arquivo, filmes);

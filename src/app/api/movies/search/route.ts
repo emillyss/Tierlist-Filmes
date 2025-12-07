@@ -40,7 +40,7 @@ export async function GET(req: Request) { // fazendo uma funçãozinha pra GET n
   return NextResponse.json(movie);
 }
 
-//Recebe o nome do filme
-//Consulta a OMDb API
-//Retorna dados filtrados do filme para a página /tierlist/add
+//Recebe o nome do filme check
+//Consulta a OMDb API check
+//Retorna dados filtrados do filme para a página /tierlist/add check
 

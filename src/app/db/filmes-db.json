@@ -100,5 +100,22 @@
     "imdbRating": "5.4",
     "category": "S",
     "createdAt": "2025-12-07T19:10:54.582Z"
+  },
+  {
+    "id": "tt0799922",
+    "title": "Wizards of Waverly Place",
+    "year": "2007–2012",
+    "poster": "https://m.media-amazon.com/images/M/MV5BMjhlMTJiNjctZTY2MC00YTU0LWEzODUtZGM2NDA3N2ZhYWQ2XkEyXkFqcGc@._V1_SX300.jpg",
+    "runtime": "22 min",
+    "genre": "Adventure, Comedy, Drama",
+    "plot": "The Russo family may be an ordinary family with an average restaurant, but behind closed doors, all three children must compete to be the next family wizard.",
+    "director": "N/A",
+    "writer": "Todd J. Greenwald",
+    "actors": "Selena Gomez, David Henrie, Jake T. Austin",
+    "country": "United States",
+    "awards": "Won 2 Primetime Emmys. 49 wins & 68 nominations total",
+    "imdbRating": "6.9",
+    "category": "S",
+    "createdAt": "2025-12-07T19:36:06.913Z"
   }
 ]
