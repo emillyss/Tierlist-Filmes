@@ -1,0 +1,81 @@
+#principal{
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.932);
+}
+
+#parteCima{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+#tituloCat{
+    margin-top: 0;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+section{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px; 
+}
+
+button{
+    padding: 8px 12px;
+    cursor: pointer;
+}
+
+#letra{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#mensagemCat{
+    font-size: 16px;
+}
+
+.categoria{
+    /* border: 1px solid black; */
+    border-radius: 6px;
+    padding: 20px;
+    min-height: 180px;
+}
+
+.categoria-S {
+    background: #ffe066; 
+}
+
+.categoria-A {
+    background: #adf38f; 
+}
+
+.categoria-B {
+    background: #90c6ff; 
+}
+
+.categoria-C {
+    background: #f7d6c1;
+}
+
+.categoria-D {
+    background: #ff7575; 
+}
+
+#mensagem{
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+    font-size: 17px;
+}
+
+h1{
+    color: white;
+}
+
+#text-cat{
+    height: 80px;
+}
+
+

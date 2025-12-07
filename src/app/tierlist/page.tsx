@@ -1,53 +1,66 @@
-//Exibe os filmes organizados por categorias S/A/B/C/D
-//Possui botão "Adicionar filme" que redireciona para tierlist/add/page.tsx
-
 import Link from "next/link";
 import ConexaoBD from "@/app/libs/conexao-bd";
-import MovieCard from "@/app/ui/movie-card"; // se @ não estiver funcionando, use '../../ui/movie-card'
+import MovieCard from "@/app/ui/movie-card"; 
+import "@/app/styles/tierlist.css";
 
 const arquivo = 'filmes-db.json';
 const categories = ['S','A','B','C','D'] as const;
+const mensagem = ['Cinema supremo e quem discorda está errado','Brilha, mas não ofusca ninguém', 'Roteiro ok, direção ok, atuação ok: um festival de ok', 'Perderam dinheiro fazendo e perdi meu tempo assistindo', 'Pagaria pra desver'];
 
 export default async function TierlistPage() {
-  const dados = await ConexaoBD.retornaBD(arquivo); // lê filmes-db.json
+  const dados = await ConexaoBD.retornaBD(arquivo);
 
-  // agrupa por categoria
   const byCategory: Record<string, any[]> = { S:[], A:[], B:[], C:[], D:[] };
+
   for (const m of dados) {
-    const cat = (m.category || 'C').toUpperCase();
-    if (!byCategory[cat]) byCategory[cat] = [];
+    const cat = m.category;
     byCategory[cat].push(m);
   }
 
   return (
-    <div style={{ maxWidth: 900, margin: '32px auto', padding: 16 }}>
-      <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 24 }}>
-        <h1 style={{ margin: 0 }}>Minha Tierlist de Filmes</h1>
+    <div id='principal'>
+      <div id='parteCima'>
+        
+        <h1>Minha Tierlist de Filmes</h1>      
+       
         <Link href="/tierlist/add">
-          <button style={{ padding: '8px 12px', cursor: 'pointer' }}>Adicionar Filme</button>
+          <button id='adicionar'>Adicionar Filme</button>
         </Link>
-      </header>
+        
+      </div>
+      {/* <h3>Lembre-se: apenas sua opinião importa. </h3> */}
 
-      <section style={{ display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: 12 }}>
-        {categories.map(cat => (
-          <div key={cat} style={{ border: '1px solid #ddd', borderRadius: 6, padding: 8, minHeight: 180, background: '#fafafa' }}>
-            <h3 style={{ marginTop: 0, marginBottom: 8, textAlign: 'center' }}>{cat}</h3>
+      <section>
+        {categories.map((cat, index) => (
+          <div className={`categoria categoria-${cat}`} key={cat}>
+            
+            <div id='text-cat'>
+              <p id='tituloCat'> <span id='letra'> {cat}. </span> <span id="mensagemCat">{mensagem[index]}</span></p>
+            </div>
+            
 
-            {byCategory[cat] && byCategory[cat].length > 0 ? (
+            {byCategory[cat].length > 0 ? (
               byCategory[cat].map(movie => (
-                // aqui usamos o componente MovieCard em vez do card inline
-                <div key={movie.id} style={{ marginBottom: 8 }}>
+
+                <div className={`card-${cat}`} key={movie.id}>
+                  
                   <MovieCard {...movie} />
+                  
                 </div>
               ))
             ) : (
-              <div style={{ fontSize: 13, color: '#666', textAlign: 'center', marginTop: 24 }}>
+              <div style={{ fontSize: 13, color: 'black', textAlign: 'center', marginTop: 24 }}>
                 Nenhum filme
               </div>
             )}
+            
           </div>
         ))}
       </section>
+
+      <div id='mensagem'>
+      <p style={{color:'white'}}>Lembre-se: apenas sua opinião importa.</p>
+      </div>
     </div>
   );
 }

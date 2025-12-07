@@ -1,104 +1,157 @@
 //card visual do filme
 
 import ConexaoBD from '@/app/libs/conexao-bd';
+import Image from "next/image";
+import Link from "next/link";
+import "@/app/styles/movie-card.css";
 import { redirect } from 'next/navigation';
+import estrela from 'public/estrela.png';
+
+
 
 export interface MovieProps {
   id: string;
   title: string;
-  posterPath?: string | null;
-  release_date?: string | null;
-  overview?: string | null;
+  year: string;
+  poster?: string | null;
+  runtime: string;
+  genre: string;
+  plot: string;
   category: 'S' | 'A' | 'B' | 'C' | 'D';
+  director: string;
+  writer: string;
+  actors: string;
+  country: string;
+  awards: string;
+  imdbRating: string;
 }
 
 const arquivo = 'filmes-db.json';
 
+
 export default function MovieCard(props: MovieProps) {
 
-  // Server action para deletar o filme (recebe FormData do form)
-  const deleteMovie = async (formData: FormData) => {
+  // Server action para deletar o filme
+  const deleteMovie = async () => {
     'use server';
-    const id = String(formData.get('id') ?? props.id);
+    const filme = await ConexaoBD.retornaBD(arquivo);
 
-    const filmes = await ConexaoBD.retornaBD(arquivo);
-    const idx = filmes.findIndex((f: any) => f.id === id);
-    if (idx !== -1) {
-      filmes.splice(idx, 1);
-      await ConexaoBD.armazenaBD(arquivo, filmes);
-    }
+    const pokemonToRemove =  filme.findIndex((f) => f.id === props.id);
+
+    filme.splice(pokemonToRemove,1);
+
+    await ConexaoBD.armazenaBD(arquivo, filme);
 
     redirect('/tierlist');
   };
 
   // Server action para mudar a categoria (recebe FormData do form)
-  const changeCategory = async (formData: FormData) => {
+  const changeCategoryLeft = async (formData: FormData) => {
     'use server';
-    const id = String(formData.get('id') ?? props.id);
-    const newCat = String(formData.get('category') ?? props.category).toUpperCase();
 
-    if (!['S','A','B','C','D'].includes(newCat)) {
-      redirect('/tierlist');
-      return;
-    }
+    const id = formData.get('id') as string;
+    const category = formData.get('category') as string;
 
-    const filmes = await ConexaoBD.retornaBD(arquivo);
-    const idx = filmes.findIndex((f: any) => f.id === id);
-    if (idx !== -1) {
-      filmes[idx].category = newCat;
-      await ConexaoBD.armazenaBD(arquivo, filmes);
-    }
+    const map = { S: "S", A: "S", B: "A", C: "B", D: "C" };
+    const newCat = map[category];
+
+    const filme = await ConexaoBD.retornaBD(arquivo);
+    const idx = filme.findIndex((f) => f.id === props.id);
+
+    filme[idx].category = newCat;
+
+    await ConexaoBD.armazenaBD(arquivo, filme);
 
     redirect('/tierlist');
   };
 
-  // pequeno helper para mostrar ano protegido
-  const renderYear = () => {
-    if (!props.release_date) return '';
-    return `(${String(props.release_date).slice(0,4)})`;
+  const changeCategoryRight = async (formData: FormData) => {
+    'use server';
+
+    const id = formData.get('id') as string;
+    const category = formData.get('category') as string;
+    
+    const map = { S: "A", A: "B", B: "C", C: "D", D: "D" };
+    const newCat = map[category];
+
+    const filme = await ConexaoBD.retornaBD(arquivo);
+    const idx = filme.findIndex((f) => f.id === props.id);
+
+    filme[idx].category = newCat;
+
+    await ConexaoBD.armazenaBD(arquivo, filme);
+
+    redirect('/tierlist');
   };
 
-  const posterUrl = (props as any).poster || props.posterPath || null;
 
   return (
-    <div style={{ border: '1px solid #e6e6e6', padding: 10, borderRadius: 6, background: '#fff' }}>
-      <div style={{ display: 'flex', gap: 12 }}>
-        <div style={{ width: 88, minHeight: 120 }}>
-          {posterUrl ? (
-            <img src={String(posterUrl)} alt={props.title} style={{ width: '100%', borderRadius: 4 }} />
-          ) : (
-            <div style={{ width: '100%', height: 120, background: '#f3f3f3', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#999', borderRadius: 4 }}>
-              Sem poster
-            </div>
-          )}
-        </div>
 
-        <div style={{ flex: 1 }}>
-          <div style={{ fontWeight: 700 }}>{props.title} <span style={{ fontWeight: 400, color: '#666' }}>{renderYear()}</span></div>
-          {props.overview && <p style={{ margin: '8px 0', fontSize: 13, color: '#444' }}>{props.overview}</p>}
+    <article>
 
-          <div style={{ display: 'flex', gap: 8, alignItems: 'center', marginTop: 8 }}>
-            {/* Form que altera categoria */}
-            <form action={changeCategory} method="post" style={{ display: 'inline-flex', gap: 8, alignItems: 'center' }}>
-              <input type="hidden" name="id" value={props.id} />
-              <select name="category" defaultValue={props.category} style={{ padding: 6 }}>
-                <option value="S">S</option>
-                <option value="A">A</option>
-                <option value="B">B</option>
-                <option value="C">C</option>
-                <option value="D">D</option>
-              </select>
-              <button type="submit" style={{ padding: '6px 8px' }}>Mudar</button>
-            </form>
 
-            {/* Form que deleta o filme */}
-            <form action={deleteMovie} method="post" style={{ display: 'inline' }}>
-              <input type="hidden" name="id" value={props.id} />
-              <button type="submit" style={{ padding: '6px 8px' }}>Deletar</button>
-            </form>
+      {props.category !== 'S' && (
+        <form action={changeCategoryLeft}>
+          <input type="hidden" name="id" value={props.id} />
+          <input type="hidden" name="category" value={props.category} />
+          <button className='btn-moverLeft' type="submit"> ‹ </button>
+        </form>
+      )}
+    
+      <div id='card'>
+        <p style={{textAlign: 'center'}}> <span  id='titulo'>{props.title} </span> <span  style={{ fontSize: 13, color: '#666', textAlign: 'center', marginTop: 24 }}>({props.year})</span>
+        </p>
+        <div id='central'>
+          <div id='imagem'>
+            {props.poster ? (
+              <Image
+                src={props.poster}
+                alt={`Poster - ${props.title}`}
+                width={100}
+                height={150}
+              />
+            ) : (
+              <div style={{ fontSize: 13, color: '#666', textAlign: 'center', marginTop: 24 }}>Sem poster</div>
+            )}
           </div>
-        </div>
+
+          <div className='dadoSimples'>
+              <div id='nota'>
+              <Image
+                src={estrela}
+                alt={'estrela'}
+                width={30}
+                height={30}
+              />
+              <p id='rating'>{props.imdbRating}</p>
+             </div>
+
+              <p id='genero'>{props.genre}</p>  
+
+              <Link href={`/tierlist/detalhes/${props.id}`}>
+                <button id='btnDetalhes'>Detalhes</button>
+              </Link>
+              
+              <form action={deleteMovie}>
+                <button id="btnDelete">x</button>
+              </form>
+          </div>
+    
+
+
       </div>
-    </div>
+      </div>
+
+      {props.category !== 'D' && (
+      <form action={changeCategoryRight}>
+        <input type="hidden" name="id" value={props.id} />
+        <input type="hidden" name="category" value={props.category} />
+        <button className='btn-moverRight' type="submit"> › </button>
+      </form>
+      )}
+
+    </article>
+
   );
+
 }

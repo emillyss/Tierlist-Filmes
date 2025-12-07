@@ -11,7 +11,7 @@ export default function UserInfo(userInfo: IUserInfo){
     const name = userInfo.userEmail.replace(regex,""); //para trocar o que está depois do @ por vazio
 
     return(
-        <p className='p'>Olá {name}</p>
+        <p className='p'>Olá, {name}!</p>
     )
 
 }

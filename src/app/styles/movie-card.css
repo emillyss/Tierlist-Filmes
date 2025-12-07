@@ -1,0 +1,104 @@
+article{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: relative; 
+    margin-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    min-height: 250px;
+    background: rgba(255, 255, 255, 0.619);
+    box-shadow: 0 8px 14px rgba(0,0,0,0.3); 
+    align-items: stretch; /* para os filhos ocuparem toda a altura */
+    
+}
+
+#titulo{
+    font-weight: bold;
+    text-align: center;
+
+}
+
+.dadoSimples{
+    display: flex;
+    flex-direction: column; 
+    margin-left: 5px;
+    justify-content: space-between;
+}
+
+#central{
+    display: flex;   
+    justify-content: center;
+}
+
+.btn-moverRight{
+    border: 0;
+    border-radius: 100px;
+    margin-left: 5px;
+    margin-right: 0;
+    position: absolute; 
+    right: -20px; 
+    bottom: 100px; 
+    color: black;
+    background: transparent;
+    font-size: 16px;
+    font-weight: bold;
+
+}
+
+.btn-moverLeft{
+    border: 0;
+    border-radius: 100px;
+    color: black;
+    margin-right: 5px;
+    margin-left: 0px;
+    position: absolute; 
+    left: -20px; 
+    bottom: 100px; 
+    background: transparent;
+    font-size: 16px;
+    font-weight: bold;
+    
+}
+
+#btnDelete{
+    position: absolute; 
+    right: 8px; 
+    bottom: 8px; 
+    background-color: #e53935; 
+    color: #fff; 
+    border: none; 
+    padding: 6px 10px; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-weight: 600; 
+}
+
+
+#btnDetalhes{
+    padding: 6px;
+    background: rgba(59, 66, 60, 0.222);
+    border: none;
+    border-radius: 6px;
+    color: rgba(0, 0, 0, 0.927);
+    margin-left: 8px;
+}
+
+#nota{
+    display: flex;
+    align-items: center;
+}
+
+#genero{
+    margin-left: 8px;
+}
+
+#card{  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+}
+

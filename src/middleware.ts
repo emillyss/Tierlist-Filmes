@@ -24,7 +24,7 @@ export async function middleware(req: NextRequest){
 
     if(publicRoutes.includes(pathname) && session)
     {
-        return NextResponse.redirect(new URL('/dashboard', req.nextUrl));
+        return NextResponse.redirect(new URL('/tierlist', req.nextUrl));
     }
     
     if(!session && !publicRoutes.includes(pathname)){

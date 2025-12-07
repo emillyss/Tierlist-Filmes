@@ -1,0 +1,38 @@
+#card-movie{
+    background: rgba(59, 66, 60, 0.222);
+    border-radius: 30px;
+    padding: 30px;
+    width: 1000px;
+    padding-bottom: 80px;
+}
+
+#tudo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    margin-bottom: 15px;
+}
+
+.dados{
+    display: flex; 
+}
+
+.nome{
+    font-weight: 550; 
+}
+
+#btnVoltar{
+    position: absolute; 
+    left: 8px; 
+    bottom: 8px; 
+    background-color: white;
+    border: none; 
+    padding: 6px 10px; 
+    border-radius: 6px; 
+    cursor: pointer; 
+    font-weight: 600; 
+    margin: 30px;
+}
