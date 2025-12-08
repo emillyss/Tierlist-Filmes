@@ -28,8 +28,9 @@ export default async function TierlistPage() {
         </Link>
         
       </div>
+      {/* <h3>Lembre-se: apenas sua opinião importa. </h3> */}
 
-      <section id='categoria'>
+      <section>
         {categories.map((cat, index) => (
           <div className={`categoria categoria-${cat}`} key={cat}>
             

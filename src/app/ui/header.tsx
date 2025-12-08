@@ -1,5 +1,5 @@
 import tiermovie from 'public/tiermovie.png';
-import fita from 'public/fitaHeader.png'
+import claquete from 'public/claqueteDourada.png'
 import Image from 'next/image';
 import Link from 'next/link';
 import LogoutButton from './logout-btn';
@@ -13,10 +13,10 @@ export default async function Header(){
 
   return (
     <header>
-      <div id='parteEsquerda'>
-        <Image id='IMGfita' src={fita} alt='imagem de um fita de filme'/>
-        <Image id='IMGlogo' src={tiermovie} alt='logo tiermovie'/>
-        <p id='p-tiermovie'>TIER MOVIE</p>
+      <div id='kkk'>
+        <Image id='tiermovie' src={tiermovie} alt='imagem fita'/>
+        <Image id='claquete' src={claquete} alt='imagem fita'/>
+        <h1 id='tier'>TIER MOVIE</h1>
       </div>
       <div>
         {session ? (
@@ -30,9 +30,7 @@ export default async function Header(){
           </div>
           
         ) : (
-          <div style={{color:'white'}}>
-            <Link href="/login">Login</Link>
-          </div>
+          <Link href="/login">Login</Link>
         )}
       </div>
 

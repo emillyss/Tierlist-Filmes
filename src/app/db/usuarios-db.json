@@ -1,5 +1,10 @@
 [
   {
+    "id": "284a82c1-a95c-4f05-a6e1-389dadb1c28f",
+    "email": "emilly@gmail.com",
+    "password": "$2b$10$AKAskEGXn2qko6eUBMMWM.ko6lnDrV290VN.ObKvZKRIKONg6k5d6"
+  },
+  {
     "id": "c68aff04-4209-4be2-aa94-0cd36aea5459",
     "email": "vinicius@vini.com",
     "password": "$2b$10$0lljtJxm0KvwLHYf0IP5/uUrYo0tDWS.sa0Jqi5OpYPRJa3GJgV4S"
@@ -8,10 +13,5 @@
     "id": "4fb9ab0e-fa38-43b0-8235-b8577436668c",
     "email": "abelhudo@bee.com",
     "password": "$2b$10$Qojr/2GEB.YnCfO/bvYFae5OV6TkDoLz2EwygVzmBJCKytU9xXqHW"
-  },
-  {
-    "id": "89c38535-3a85-4f08-a0d8-a7c34f46b936",
-    "email": "emilly@gmail.com",
-    "password": "$2b$10$pNbbtTHxq5eqgqDnkN//R.Mhd1P54YNmMb1FKeTyL.XSaAh6B3932"
   }
 ]

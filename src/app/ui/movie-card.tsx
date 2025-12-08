@@ -101,7 +101,7 @@ export default function MovieCard(props: MovieProps) {
       <div id='card'>
         <p style={{textAlign: 'center'}}> <span  id='titulo'>{props.title} </span> <span  style={{ fontSize: 13, color: '#666', textAlign: 'center', marginTop: 24 }}>({props.year})</span>
         </p>
-        <div id='centro'>
+        <div id='central'>
           <div id='imagem'>
             {props.poster ? (
               <Image

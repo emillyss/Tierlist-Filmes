@@ -7,29 +7,28 @@ header{
     color: white;
 }
 
-#IMGfita{
+#tiermovie{
     height: 100px;
     width: auto;
 }
 
-#IMGlogo{
+#claquete{
     height: 124px;
     width: auto;
     margin-left: 12px;
 }
 
-#parteEsquerda{
+#kkk{
     display: flex;
     align-items: center;
 }
 
-#p-tiermovie{
+#tier{
     margin-left: 100px;
-    color: white;
-    font-size: 40px;
-    font-weight: 600;
 }
 
 #logout{
-    align-items: flex-end;  
+    align-items: flex-end;
+    
+    
 }
