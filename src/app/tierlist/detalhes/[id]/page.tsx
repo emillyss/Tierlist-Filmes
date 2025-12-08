@@ -1,11 +1,11 @@
 
 import ConexaoBD from "@/app/libs/conexao-bd";
-import "@/app/styles/movie-card.css";
 import "@/app/styles/detalhes.css";
 import { MovieProps } from "@/app/ui/movie-card";
 import Image from "next/image";
 import { redirect } from "next/navigation";
 import Link from "next/link";
+import estr from 'public/estrela.png';
 
 const arquivo = 'filmes-db.json';
 
@@ -42,56 +42,74 @@ export default async function VisualizarDetalhes({params}: ViewMovieProps){
                         )}
                     </div>
 
-                    <div className='dadoSimples'>
-
                     <div className='dados'>
+
+                    <div className='dado'>
+
+
+                    <div id='primeiroDado'>
+
+                    <div className='dado'>
+                    <p className='nome'>Runtime: </p>
+                    <p style={{marginLeft: '10px'}}>{movieToView.runtime}</p>
+                    </div>
+                    
+                        <Image
+                        id='estr'
+                        src={estr}
+                        alt={'estrela'}
+                        width={60}
+                        height={60}
+                    />
+                    <p id='nota'>{movieToView.imdbRating}</p>
+                    </div>
+
+                    </div>
+
+                    <div className='dado'>
                     <p className='nome'>Genre: </p>
                     <p style={{marginLeft: '32px'}}>{movieToView.genre}</p>
                     </div>
 
-                    <div className='dados'>
-                    <p className='nome'>Runtime: </p>
-                    <p style={{marginLeft: '10px'}}>{movieToView.runtime}</p>
-                    </div>
 
-                    <div className='dados'>
+                    <div className='dado'>
                     <p className='nome'>Director: </p>
                     <p style={{marginLeft: '15px'}}>{movieToView.director}</p>
                     </div>
 
-                    <div className='dados'>
+                    <div className='dado'>
                     <p className='nome'>Writer: </p>
                     <p style={{marginLeft: '30px'}}>{movieToView.writer}</p>
                     </div>
 
-                    <div className='dados'>
+                    <div className='dado'>
                     <p className='nome'>Actors: </p>
                     <p style={{marginLeft: '28px'}}>{movieToView.actors}</p>
                     </div>
 
-                    <div className='dados'>
+                    <div className='dado'>
                     <p className='nome'>Country: </p>
                     <p style={{marginLeft: '15px'}}>{movieToView.country}</p>
                     </div>
 
-                    <div className='dados'>
+                    <div className='dado'>
                     <p className='nome'>Awards: </p>
                     <p style={{marginLeft: '20px'}}>{movieToView.awards}</p>
                     </div>
 
-                    <div className='dados'>
+                    <div className='dado'>
                     <p className='nome'>Plot: </p>
                     <p style={{marginLeft: '45px'}}>{movieToView.plot}</p>
                     </div>
 
 
                     <Link href="/tierlist">
-                    <button id='btnVoltar'>Voltar</button>
+                    <button id='btnVoltar'>‹ Voltar</button>
                     </Link>
                     </div>
 
             </div>
-        </div>
+        
         </article>
         </div>
         

@@ -16,13 +16,13 @@
     text-align: center;
 }
 
-section{
+#categoria{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 12px; 
 }
 
-button{
+#adicionar{
     padding: 8px 12px;
     cursor: pointer;
 }
