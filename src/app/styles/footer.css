@@ -10,7 +10,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba(0, 0, 0);
+    background: rgb(39, 39, 39);
     position: relative; 
     height: 91.3px;
 }
