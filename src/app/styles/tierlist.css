@@ -22,13 +22,13 @@ body {
     text-align: center;
 }
 
-section{
+#categoria{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 8px; 
 }
 
-button{
+#adicionar{
     padding: 8px 12px;
     cursor: pointer;
 }

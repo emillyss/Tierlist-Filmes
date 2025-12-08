@@ -1,5 +1,6 @@
 import { deleteSessionCookie } from '@/app/libs/session';
 import { redirect } from 'next/navigation';
+import "@/app/styles/logout.css";
 
 export default function LogoutButton(){
   const logout = async () => {
@@ -10,7 +11,7 @@ export default function LogoutButton(){
 
   return (
     <form action={logout}>
-      <button>Logout</button>
+      <button id='btn-logout'>Logout</button>
     </form>
   )
 }

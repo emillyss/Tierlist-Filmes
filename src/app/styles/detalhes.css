@@ -1,27 +1,68 @@
 
 #card-movie{
-    background: rgb(255, 255, 255);
+    background: rgba(59, 66, 60, 0.222);
     border-radius: 30px;
     padding: 30px;
     width: 1000px;
     padding-bottom: 80px;
+    justify-content: space-between;
+    min-height: 650px;
+    
 }
+
+#primeiroDado{
+    display: flex;
+    position: relative;
+
+}
+
+#card-movie #estr{
+    position: absolute; 
+    right: -400px; 
+    top: -20px; 
+}
+
+#card-movie #nota{
+    position: absolute; 
+    right: -450px;  
+    font-size: 30px;
+    font-weight: 550;
+    top: -8px; 
+}
+
+.dados{
+    display: flex;
+    flex-direction: column; 
+    margin-left: 20px;
+    justify-content: space-between;
+    
+}
+
+#central{
+    display: flex;   
+    justify-content: center;
+}
+
 
 #tudo{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: rgba(0, 0, 0, 0.932);
+    height: 80vh; 
+
 }
 
-h1{
-    margin-bottom: 15px;
+#titulo{
+    
+    color: black;
 }
 
 h2{
     padding: 2%;
 }
 
-.dados{
+.dado{
     display: flex; 
 }
 
@@ -31,13 +72,17 @@ h2{
 
 #btnVoltar{
     position: absolute; 
-    left: 8px; 
-    bottom: 8px; 
-    background-color: white;
-    border: none; 
-    padding: 6px 10px; 
-    border-radius: 6px; 
+    left: 28px; 
+    bottom: 25px; 
     cursor: pointer; 
-    font-weight: 600; 
-    margin: 30px;
+    font-weight: 600;  
+    padding: 6px;
+    background: rgba(59, 66, 60, 0.222);
+    border: none;
+    border-radius: 6px;
+    color: rgba(0, 0, 0, 0.927);
+    width: 80px;
+    height: 40px;
 }
+
+
