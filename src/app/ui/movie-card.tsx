@@ -31,21 +31,20 @@ const arquivo = 'filmes-db.json';
 
 export default function MovieCard(props: MovieProps) {
 
-  // Server action para deletar o filme
   const deleteMovie = async () => {
     'use server';
     const filme = await ConexaoBD.retornaBD(arquivo);
 
-    const pokemonToRemove =  filme.findIndex((f) => f.id === props.id);
+    const movieToRemove =  filme.findIndex((f) => f.id === props.id);
 
-    filme.splice(pokemonToRemove,1);
+    filme.splice(movieToRemove,1);
 
     await ConexaoBD.armazenaBD(arquivo, filme);
 
     redirect('/tierlist');
   };
 
-  // Server action para mudar a categoria (recebe FormData do form)
+
   const changeCategoryLeft = async (formData: FormData) => {
     'use server';
 

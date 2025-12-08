@@ -12,7 +12,6 @@
     padding-bottom: 80px;
     justify-content: space-between;
     min-height: 80%;
-    
 }
 
 #primeiroDado{
@@ -55,11 +54,10 @@
     align-items: center;
     background: rgba(0, 0, 0, 0.932);
     height: 80vh; 
-
 }
 
 #titulo{
-    
+    margin-bottom: 40px;
     color: black;
 }
 

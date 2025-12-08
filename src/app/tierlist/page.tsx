@@ -29,7 +29,7 @@ export default async function TierlistPage() {
         
       </div>
 
-      <section id='categoria'>
+      <section id='categorias'>
         {categories.map((cat, index) => (
           <div className={`categoria categoria-${cat}`} key={cat}>
             
