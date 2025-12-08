@@ -1,5 +1,6 @@
+
 #card-movie{
-    background: rgba(59, 66, 60, 0.222);
+    background: rgb(255, 255, 255);
     border-radius: 30px;
     padding: 30px;
     width: 1000px;
@@ -14,6 +15,10 @@
 
 h1{
     margin-bottom: 15px;
+}
+
+h2{
+    padding: 2%;
 }
 
 .dados{
