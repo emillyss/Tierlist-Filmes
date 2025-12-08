@@ -1,28 +1,33 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎬 Tier Movie
 
-## Getting Started
+Esse projeto é um projeto **web de Tierlist de filmes**, criada para classificar filmes de acordo com sua opinião (e somente ela).  
+A ideia é permitir que qualquer pessoa consiga montar suas próprias tierlists de maneira intuitiva, usando dados reais de filmes obtidos pela OMDb API.
 
-First, run the development server:
+---
+
+## 🚀 Funcionalidades
+
+- 🔍 Busca de filmes por nome
+- 🎞️ Busca de dados via [**OMDb API**](https://www.omdbapi.com)
+- 🧩 Classificação em tiers S, A, B, C, D
+- 💾 Persistência básica de dados (local)
+
+___
+[Next.js](https://nextjs.org) project criado com [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+
+
+Para rodar:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra [http://localhost:3000](http://localhost:3000) no seu navegador e cadastre um usuário.
+Faça Log-in e aproveite a aplicação.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Mais informações sobre o Next.js
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
 
 - [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
