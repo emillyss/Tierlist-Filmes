@@ -3,6 +3,11 @@
 Esse projeto é um projeto **web de Tierlist de filmes**, criada para classificar filmes de acordo com sua opinião (e somente ela).  
 A ideia é permitir que qualquer pessoa consiga montar suas próprias tierlists de maneira intuitiva, usando dados reais de filmes obtidos pela OMDb API.
 
+### Login
+![Busca de filmes](public/readme/login.png)
+
+### Tierlist
+![Tierlist](public/readme/tierlist.png)
 ---
 
 ## 🚀 Funcionalidades
