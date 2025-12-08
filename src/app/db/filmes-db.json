@@ -13,25 +13,8 @@
     "country": "United States, United Kingdom",
     "awards": "Won 2 Oscars. 163 wins & 165 nominations total",
     "imdbRating": "9.1",
-    "category": "B",
-    "createdAt": "2025-12-07T19:09:36.215Z"
-  },
-  {
-    "id": "tt0369610",
-    "title": "Jurassic World",
-    "year": "2015",
-    "poster": "https://m.media-amazon.com/images/M/MV5BNzBhNzlkM2UtZTQyOC00NjUyLTkzMmMtNDQ1YTM5N2NmMGE5XkEyXkFqcGc@._V1_SX300.jpg",
-    "runtime": "124 min",
-    "genre": "Action, Adventure, Sci-Fi",
-    "plot": "A new theme park, built on the original site of Jurassic Park, creates a genetically modified hybrid dinosaur, the Indominus Rex, which escapes containment and goes on a killing spree.",
-    "director": "Colin Trevorrow",
-    "writer": "Rick Jaffa, Amanda Silver, Colin Trevorrow",
-    "actors": "Chris Pratt, Bryce Dallas Howard, Irrfan Khan",
-    "country": "United States, Japan",
-    "awards": "15 wins & 58 nominations total",
-    "imdbRating": "6.9",
     "category": "D",
-    "createdAt": "2025-12-07T19:10:13.896Z"
+    "createdAt": "2025-12-07T19:09:36.215Z"
   },
   {
     "id": "tt0107290",
@@ -47,7 +30,7 @@
     "country": "United States",
     "awards": "Won 3 Oscars. 44 wins & 27 nominations total",
     "imdbRating": "8.2",
-    "category": "C",
+    "category": "A",
     "createdAt": "2025-12-07T19:10:23.128Z"
   },
   {
@@ -64,7 +47,7 @@
     "country": "United States",
     "awards": "2 nominations total",
     "imdbRating": "6.0",
-    "category": "S",
+    "category": "D",
     "createdAt": "2025-12-07T19:10:41.764Z"
   },
   {
@@ -81,7 +64,7 @@
     "country": "United States",
     "awards": "Nominated for 4 Primetime Emmys. 21 wins & 28 nominations total",
     "imdbRating": "5.4",
-    "category": "A",
+    "category": "B",
     "createdAt": "2025-12-07T19:10:54.582Z"
   },
   {
@@ -98,7 +81,7 @@
     "country": "United States, United Kingdom, Canada",
     "awards": "Won 1 Oscar. 45 wins & 148 nominations total",
     "imdbRating": "8.7",
-    "category": "C",
+    "category": "B",
     "createdAt": "2025-12-07T22:51:50.395Z"
   },
   {
@@ -115,7 +98,7 @@
     "country": "United States",
     "awards": "Won 1 Primetime Emmy. 3 wins & 10 nominations total",
     "imdbRating": "8.4",
-    "category": "S",
+    "category": "C",
     "createdAt": "2025-12-07T22:58:24.056Z"
   },
   {
@@ -132,7 +115,41 @@
     "country": "United States",
     "awards": "Nominated for 1 Oscar. 8 wins & 46 nominations total",
     "imdbRating": "7.8",
-    "category": "A",
+    "category": "S",
     "createdAt": "2025-12-07T23:39:47.719Z"
+  },
+  {
+    "id": "tt9243804",
+    "title": "The Green Knight",
+    "year": "2021",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNjRjNmU1M2ItNDU4Ni00ZGY2LTlmNzItY2MxYmY3OTllZjMwXkEyXkFqcGc@._V1_SX300.jpg",
+    "runtime": "130 min",
+    "genre": "Adventure, Drama, Fantasy",
+    "plot": "A fantasy retelling of the medieval story of Sir Gawain and the Green Knight.",
+    "director": "David Lowery",
+    "writer": "David Lowery, The Gawain Poet",
+    "actors": "Dev Patel, Alicia Vikander, Joel Edgerton",
+    "country": "United States, Canada, Ireland",
+    "awards": "21 wins & 119 nominations total",
+    "imdbRating": "6.6",
+    "category": "S",
+    "createdAt": "2025-12-07T23:57:04.666Z"
+  },
+  {
+    "id": "tt0898266",
+    "title": "The Big Bang Theory",
+    "year": "2007–2019",
+    "poster": "https://m.media-amazon.com/images/M/MV5BZjgzY2QyNzItNDhhYi00ZWIwLWFjN2UtZDJkN2MxYWNjMmJjXkEyXkFqcGc@._V1_SX300.jpg",
+    "runtime": "22 min",
+    "genre": "Comedy, Romance",
+    "plot": "Aspiring actress Penny moves into a Pasadena apartment across the hall from brilliant but socially awkward physicists Sheldon Cooper and Leonard Hofstadter, and shows them how little they know about life outside of the lab.",
+    "director": "N/A",
+    "writer": "Chuck Lorre, Bill Prady",
+    "actors": "Johnny Galecki, Jim Parsons, Kaley Cuoco",
+    "country": "United States",
+    "awards": "Won 10 Primetime Emmys. 79 wins & 257 nominations total",
+    "imdbRating": "8.1",
+    "category": "C",
+    "createdAt": "2025-12-07T23:57:42.424Z"
   }
 ]

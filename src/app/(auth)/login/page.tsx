@@ -86,7 +86,7 @@ export default function LoginPage(){
             </div>
             <button>Entrar</button>
             <div className='link-cadastrar'>
-                Não tem conta? Clique <Link className='btn-criar-conta' href="/create">aqui</Link>
+                Não tem uma conta? Clique <Link className='btn-criar-conta' href="/create">aqui</Link>
             </div>
             </form>
             </div>
