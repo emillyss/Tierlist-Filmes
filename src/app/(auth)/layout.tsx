@@ -1,7 +1,7 @@
 export default function AuthLayout({ children }: { children: React.ReactNode }) {
   return (
     <main style={{ maxWidth: 'auto', margin: '40px auto', textAlign: 'center' }}>
-      <h1>Bem-vindo(a) à sua Tierlist de Filmes</h1>
+      <h1 style={{color:"white"}}>Bem-vindo(a) à sua Tierlist de Filmes</h1>
       {children}
     </main>
   );
