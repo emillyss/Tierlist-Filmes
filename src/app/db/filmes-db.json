@@ -151,5 +151,22 @@
     "imdbRating": "8.1",
     "category": "C",
     "createdAt": "2025-12-07T23:57:42.424Z"
+  },
+  {
+    "id": "tt0460649",
+    "title": "How I Met Your Mother",
+    "year": "2005–2014",
+    "poster": "https://m.media-amazon.com/images/M/MV5BNjg1MDQ5MjQ2N15BMl5BanBnXkFtZTYwNjI5NjA3._V1_SX300.jpg",
+    "runtime": "22 min",
+    "genre": "Comedy, Drama, Romance",
+    "plot": "A father recounts to his children the journey he and his four best friends took leading up to him meeting their mother.",
+    "director": "N/A",
+    "writer": "Carter Bays, Craig Thomas",
+    "actors": "Josh Radnor, Jason Segel, Cobie Smulders",
+    "country": "United States",
+    "awards": "Won 10 Primetime Emmys. 29 wins & 102 nominations total",
+    "imdbRating": "8.3",
+    "category": "S",
+    "createdAt": "2025-12-08T02:44:30.067Z"
   }
 ]
