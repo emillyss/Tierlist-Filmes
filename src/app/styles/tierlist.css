@@ -1,6 +1,3 @@
-body {
-    background: rgba(0, 0, 0, 0.932);
-}
 #principal{
     padding: 50px;
     background: rgba(0, 0, 0, 0.932);
@@ -47,23 +44,23 @@ button{
 }
 
 .categoria-S {
-    background: #ea5d5d; 
+    background: #ffe066; 
 }
 
 .categoria-A {
-    background: #f38254; 
+    background: #adf38f; 
 }
 
 .categoria-B {
-    background: #fecc66; 
+    background: #90c6ff; 
 }
 
 .categoria-C {
-    background: #b8c378;
+    background: #f7d6c1;
 }
 
 .categoria-D {
-    background: #7bbd7a; 
+    background: #ff7575; 
 }
 
 #mensagem{

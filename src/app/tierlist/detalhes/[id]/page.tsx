@@ -27,7 +27,7 @@ export default async function VisualizarDetalhes({params}: ViewMovieProps){
         <div id='tudo'>
         <article id="card-movie">
         <div>
-        <h2 style={{textAlign: 'center'}}> <span>{movieToView.title} </span> <span  style={{ fontSize: 20, color: '#666', textAlign: 'center', marginTop: 24 }}>({movieToView.year})</span></h2>
+        <h1 style={{textAlign: 'center'}}> <span>{movieToView.title} </span> <span  style={{ fontSize: 20, color: '#666', textAlign: 'center', marginTop: 24 }}>({movieToView.year})</span></h1>
             <div id='central'>
                     <div id='imagem'>
                         {movieToView.poster ? (

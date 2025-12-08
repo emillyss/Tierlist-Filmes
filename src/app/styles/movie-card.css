@@ -9,7 +9,7 @@ article{
     padding-left: 20px;
     padding-right: 20px;
     min-height: 250px;
-    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.619);
     box-shadow: 0 8px 14px rgba(0,0,0,0.3); 
     align-items: stretch; /* para os filhos ocuparem toda a altura */
     
@@ -25,7 +25,6 @@ article{
     display: flex;
     flex-direction: column; 
     margin-left: 5px;
-    color: auto;
     justify-content: space-between;
 }
 
